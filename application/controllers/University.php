@@ -27,9 +27,20 @@ class University extends CI_Controller
     {
         $data['judul'] = 'Form Tambah Data Universitas';
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('university/add');
-        $this->load->view('templates/footer');
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('website', 'Website', 'required|valid_url');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('university/add');
+            $this->load->view('templates/footer');
+        } else {
+            $this->university->tambahDataUniversitas();
+            $this->session->set_flashdata('flash', 'ditambahkan');
+            redirect('university');
+        }
     }
 
     public function detail($id)
@@ -45,27 +56,8 @@ class University extends CI_Controller
     {
         $this->university->hapusUniversitas($id);
         $this->session->set_flashdata('flash', 'dihapus');
-        redirect('karakter_ml');
+        redirect('university');
     }
-
-    // public function tambah()
-    // {
-    //     $data['judul'] = 'Form Tambah Data Karakter ML';
-
-    //     $this->form_validation->set_rules('nama', 'Nama', 'required');
-    //     $this->form_validation->set_rules('role', 'Role', 'required');
-    //     $this->form_validation->set_rules('ultimate', 'Ultimate', 'required');
-
-    //     if ($this->form_validation->run() == FALSE) {
-    //         $this->load->view('templates/header', $data);
-    //         $this->load->view('karakter_ml/tambah');
-    //         $this->load->view('templates/footer');
-    //     } else {
-    //         $this->Karakter_ml_model->tambahDataKarakterMl();
-    //         $this->session->set_flashdata('flash', 'ditambahkan');
-    //         redirect('karakter_ml');
-    //     }
-    // }
 
     // public function edit($id)
     // {
