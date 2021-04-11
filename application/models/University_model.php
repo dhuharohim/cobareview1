@@ -12,6 +12,18 @@ class University_model extends CI_Model
         return $this->db->get_where('universitas', ['id' => $id])->row_array();
     }
 
+    public function tambahDataUniversitas()
+    {
+        $data = [
+            "nama" => $this->input->post('nama', true),
+            "alamat" => $this->input->post('alamat', true),
+            "email" => $this->input->post('email', true),
+            "website" => $this->input->post('website', true),
+        ];
+
+        $this->db->insert('universitas', $data);
+    }
+
     public function hapusUniversitas($id)
     {
         //$this->db->where('id', $id);
