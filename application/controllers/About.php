@@ -6,8 +6,8 @@ class About extends CI_Controller
     {
         $data['judul'] = 'About Me';
 
-        $this->load->view('templates/header', $data);
+        $this->load->view('layout/header', $data);
         $this->load->view('about/index', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('layout/footer');
     }
 }
