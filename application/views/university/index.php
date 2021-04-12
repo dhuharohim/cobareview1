@@ -6,7 +6,9 @@
         </div>
     </div>
 
-    <?php if ($this->session->flashdata('flash')) : ?>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+
+    <!-- <?php if ($this->session->flashdata('flash')) : ?>
         <div class="row">
             <div class="col-lg-6">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -19,7 +21,7 @@
                 </div>
             </div>
         </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <div class="row">
         <div class="col-lg-6">
@@ -68,7 +70,7 @@
                             <td>
                                 <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-info">Detail</a>
                                 <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-info">Edit</a>
-                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-info" onclick="return confirm('Apakah anda ingin menghapusnya?');">Delete</a>
+                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-info delete-button">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
