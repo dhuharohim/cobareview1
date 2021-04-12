@@ -1,9 +1,9 @@
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Kelompok 2 MKPL <?= date('Y'); ?></span>
-        </div>
+<footer class="bg-light text-center text-lg-start mt-3">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Copyright &copy; Kelompok 2 MKPL <?= date('Y'); ?>
     </div>
+    <!-- Copyright -->
 </footer>
 
 <!-- Optional JavaScript; choose one of the two! -->

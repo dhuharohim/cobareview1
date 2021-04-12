@@ -1,4 +1,11 @@
 <div class="container mt-3">
+
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <a href="<?= base_url(); ?>university/add" class="btn btn-dark">Tambah Data Universitas</a>
+        </div>
+    </div>
+
     <?php if ($this->session->flashdata('flash')) : ?>
         <div class="row">
             <div class="col-lg-6">
@@ -14,19 +21,13 @@
         </div>
     <?php endif; ?>
 
-    <div class="row mb-3">
+    <div class="row">
         <div class="col-lg-6">
-            <a href="<?= base_url(); ?>university/add" class="btn btn-primary">Tambah Data Universitas</a>
-        </div>
-    </div>
-
-    <div class="row mb-3">
-        <div class="col-lg-6">
-            <form action="" method="post">
-                <div class="input-group">
+            <form action="<?= base_url('university'); ?>" method="post">
+                <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="masukkan keyword ..." name="keyword" autocomplete="off">
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">Cari</button>
+                        <input class="btn btn-dark" type="submit" name="submit" value="Cari">
                     </div>
                 </div>
             </form>
@@ -35,18 +36,6 @@
 
     <h3 class="mt-3">Daftar Universitas</h3>
 
-    <div class="row">
-        <!-- <div class="col-md-5">
-            <form action="<?= base_url('orang'); ?>" method="post">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="masukkan keyword ..." name="keyword" autocomplete="off">
-                    <div class="input-group-append">
-                        <input class="btn btn-primary" type="submit" name="submit" value="Cari">
-                    </div>
-                </div>
-            </form>
-        </div> -->
-    </div>
     <div class="row">
         <div class="col-md-10">
             <table class="table">
@@ -77,9 +66,9 @@
                                 <p><a href="<?= $univ['website']; ?>" class="text-success"><?= $univ['website']; ?></a></p>
                             </td>
                             <td>
-                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-warning">Detail</a>
-                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-success">Edit</a>
-                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin?');">Delete</a>
+                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-info">Detail</a>
+                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-info">Edit</a>
+                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-info" onclick="return confirm('Apakah anda ingin menghapusnya?');">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

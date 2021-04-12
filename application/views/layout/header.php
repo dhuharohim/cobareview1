@@ -11,6 +11,7 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/img/office-building.png">
 
     <title><?= $judul; ?></title>
 </head>
