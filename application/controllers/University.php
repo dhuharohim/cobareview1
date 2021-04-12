@@ -29,8 +29,8 @@ class University extends CI_Controller
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('website', 'Website', 'required|valid_url');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('website', 'Website', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
@@ -59,9 +59,8 @@ class University extends CI_Controller
 
         $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('website', 'Website', 'required|valid_url');
-
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('website', 'Website', 'required');
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
             $this->load->view('university/edit');
