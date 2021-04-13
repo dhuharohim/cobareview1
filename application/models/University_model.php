@@ -27,6 +27,8 @@ class University_model extends CI_Model
             "alamat" => $this->input->post('alamat', true),
             "email" => $this->input->post('email', true),
             "website" => $this->input->post('website', true),
+            "telp" => $this->input->post('telp', true),
+            "logo" => $this->_uploadImage(),
         ];
 
         $this->db->insert('universitas', $data);
@@ -39,6 +41,7 @@ class University_model extends CI_Model
             "alamat" => $this->input->post('alamat', true),
             "email" => $this->input->post('email', true),
             "website" => $this->input->post('website', true),
+            "telp" => $this->input->post('telp', true),
         ];
 
         $this->db->where('id', $this->input->post('id'));
@@ -48,6 +51,29 @@ class University_model extends CI_Model
     public function hapusUniversitas($id)
     {
         //$this->db->where('id', $id);
+        $this->_deleteImage($id);
         $this->db->delete('universitas', ['id' => $id]);
+    }
+
+    private function _uploadImage()
+    {
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 2048;
+        $config['upload_path']          = './assets/img/univ_logo';
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('image')) {
+            return $this->upload->data("file_name");
+        }
+        return "default.jpg";
+    }
+
+    private function _deleteImage($id)
+    {
+        $universitas = $this->getUniversityById($id);
+        if ($universitas['logo'] != "default.jpg") {
+            unlink(FCPATH . 'assets/img/univ_logo/' . $universitas['logo']);
+        }
     }
 }
