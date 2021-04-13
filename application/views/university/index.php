@@ -44,6 +44,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Logo</th>
                         <th>Nama</th>
                         <th>Website</th>
                         <th>Aksi</th>
@@ -63,6 +64,7 @@
                     <?php foreach ($universitas as $univ) : ?>
                         <tr>
                             <th><?= ++$i; ?></th>
+                            <td><img src="<?= base_url('assets/img/univ_logo') . '/' . $univ['logo']; ?>" alt="" style="height: 100px; width: 100px;"></td>
                             <td><?= $univ['nama']; ?></td>
                             <td>
                                 <p><a href="<?= $univ['website']; ?>" class="text-success"><?= $univ['website']; ?></a></p>
