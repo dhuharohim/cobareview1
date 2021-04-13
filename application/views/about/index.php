@@ -8,36 +8,35 @@
   font-size: 60px;
   padding-top: 20px;
 }
-.container {
-  color: black;
-}
 body {
-  background-color: #ff9292;
+  background-color: #95bddc;
   height: auto;
 }
 h2 {
-color: #45526c;
+color:#2b6684;
 margin-left: 300px;
+font-family: Poppins;
 }
 .header-content {
   float: right;
   margin-left: 300px;
-  color: #45526c;
+  color: #2b6684;
 }
 .content-des {
   float: right;
   margin-left: 300px;
   font-family: poppins;
   font-size: small;
+  color: #fff;
 }
 table {
-  padding-top: 20px;
-  margin-top: 50px;
+ font-family: poppins;
 }
 </style>
     <h1 class="mt-4"><b>About Us</b></h1>
     <div class="content-des">
-    <h2><b>KELOMPOK 5</b></h2>
+    <h2><b>KELOMPOK 2</b></h2>
+    
     <h5 class="header-content">Kami hadir memberikan solusi terbaik untuk Anda yang mencari Kampus terbaik</h5>
     <p class="content-des"> Melalui Tugas mata kuliah MKPL ini kami Kelompok 5 prodi Ilmu Komputer Unoversitas Pertamina mencoba melakukan 
     kerjasama dalam membuat suatu project dengan menggunakn fitur git dalam melakukan colaboration, 
