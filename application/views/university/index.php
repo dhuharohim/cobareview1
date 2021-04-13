@@ -1,8 +1,4 @@
-<style>
-    body {
-        background-color: #ff9292;
-    }
-</style>
+
 <body >
 
 <div class="container mt-3">
