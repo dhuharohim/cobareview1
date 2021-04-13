@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
-
+<style>
+    head {
+        background-color: deeppink;
+    }
+</style>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

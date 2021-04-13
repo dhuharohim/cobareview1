@@ -1,11 +1,11 @@
 <style>
-    footer {
-        background-color: teal;
+    .text-center {
+        color: #fff;
     }
 </style>
-<footer class="bg-light text-center text-lg-start mt-3">
+<footer class="bg-light text-center text-lg-start mt-3" >
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-3" style="background-color:#627e9a;" >
         Copyright &copy; Kelompok 2 MKPL <?= date('Y'); ?>
     </div>
     <!-- Copyright -->
