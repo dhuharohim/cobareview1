@@ -38,7 +38,7 @@ table {
     <h2><b>KELOMPOK 2</b></h2>
     
     <h5 class="header-content">Kami hadir memberikan solusi terbaik untuk Anda yang mencari Kampus terbaik</h5>
-    <p class="content-des"> Melalui Tugas mata kuliah MKPL ini kami Kelompok 5 prodi Ilmu Komputer Unoversitas Pertamina mencoba melakukan 
+    <p class="content-des"> Melalui Tugas mata kuliah MKPL ini kami Kelompok 2 prodi Ilmu Komputer Unoversitas Pertamina mencoba melakukan 
     kerjasama dalam membuat suatu project dengan menggunakn fitur git dalam melakukan colaboration, 
     melalui colaborasi ini kami dapat membagi tugas dan juga bekerjasama secara terstriktur</p>
     </div>
