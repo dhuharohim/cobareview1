@@ -27,6 +27,7 @@
                             <input type="text" name="website" class="form-control" id="website">
                             <small class="form-text text-danger"><?= form_error('website'); ?></small>
                         </div>
+                        <a href="<?= base_url(); ?>university" class="btn btn-outline-danger float-left mt-5">Kembali</a>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
                     </form>
                 </div>
