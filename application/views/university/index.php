@@ -53,7 +53,7 @@
                 <tbody>
                     <?php if (empty($universitas)) : ?>
                         <tr>
-                            <td colspan="4">
+                            <td colspan="5">
                                 <div class="alert alert-danger text-center" role="alert">
                                     Data tidak ditemukan!
                                 </div>
