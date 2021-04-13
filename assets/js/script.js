@@ -1,5 +1,4 @@
 const flashData = $('.flash-data').data('flashdata');
-
 function previewImg() {
     const sampul = document.querySelector('#image');
     const imgPreview = document.querySelector('.img-preview');

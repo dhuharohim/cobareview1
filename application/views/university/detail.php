@@ -17,7 +17,6 @@
                         <a href="<?= base_url(); ?>university" class="btn btn-primary">Kembali</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
