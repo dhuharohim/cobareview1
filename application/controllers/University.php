@@ -31,6 +31,7 @@ class University extends CI_Controller
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('website', 'Website', 'required');
+        $this->form_validation->set_rules('telp', 'Telp', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
@@ -61,11 +62,36 @@ class University extends CI_Controller
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('website', 'Website', 'required');
+        $this->form_validation->set_rules('telp', 'Telp', 'required');
+
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
             $this->load->view('university/edit');
             $this->load->view('layout/footer');
         } else {
+            $old_logo = $this->input->post('old_logo');
+
+            if (!empty($_FILES["image"]["name"])) {
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 2048;
+                $config['upload_path']          = './assets/img/univ_logo';
+
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('image')) {
+                    if ($old_logo != 'default.jpg') {
+                        unlink(FCPATH . 'assets/img/univ_logo/' . $old_logo);
+                    }
+
+                    $new_logo = $this->upload->data('file_name');
+                    $this->db->set('logo', $new_logo);
+                } else {
+                    $this->db->set('logo', $old_logo);
+                }
+            } else {
+                $this->db->set('logo', $old_logo);
+            }
+
             $this->university->ubahDataUniversitas();
             $this->session->set_flashdata('flash', 'diubah');
             redirect('university');

@@ -44,6 +44,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Logo</th>
                         <th>Nama</th>
                         <th>Website</th>
                         <th>Aksi</th>
@@ -63,14 +64,15 @@
                     <?php foreach ($universitas as $univ) : ?>
                         <tr>
                             <th><?= ++$i; ?></th>
+                            <td><img src="<?= base_url('assets/img/univ_logo') . '/' . $univ['logo']; ?>" alt="" style="height: 100px; width: 100px;"></td>
                             <td><?= $univ['nama']; ?></td>
                             <td>
                                 <p><a href="<?= $univ['website']; ?>" class="text-success"><?= $univ['website']; ?></a></p>
                             </td>
                             <td>
-                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-info">Detail</a>
-                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-info">Edit</a>
-                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-info delete-button">Delete</a>
+                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-pill badge-info">Detail</a>
+                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-pill badge-dark">Edit</a>
+                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-pill badge-danger delete-button">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
