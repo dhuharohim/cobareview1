@@ -53,7 +53,7 @@
                 <tbody>
                     <?php if (empty($universitas)) : ?>
                         <tr>
-                            <td colspan="4">
+                            <td colspan="5">
                                 <div class="alert alert-danger text-center" role="alert">
                                     Data tidak ditemukan!
                                 </div>
@@ -70,9 +70,9 @@
                                 <p><a href="<?= $univ['website']; ?>" class="text-success"><?= $univ['website']; ?></a></p>
                             </td>
                             <td>
-                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-info">Detail</a>
-                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-info">Edit</a>
-                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-info delete-button">Delete</a>
+                                <a href="<?= base_url(); ?>university/detail/<?= $univ['id']; ?>" class="badge badge-pill badge-info">Detail</a>
+                                <a href="<?= base_url(); ?>university/edit/<?= $univ['id']; ?>" class="badge badge-pill badge-dark">Edit</a>
+                                <a href="<?= base_url(); ?>university/delete/<?= $univ['id']; ?>" class="badge badge-pill badge-danger delete-button">Delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
