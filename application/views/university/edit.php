@@ -30,13 +30,13 @@
                             <small class="form-text text-danger"><?= form_error('website'); ?></small>
                         </div>
                         <div class="form-group">
-                            <label for="telp">Telp</label>
+                            <label for="telp">Nomor Telepon</label>
                             <input type="text" name="telp" class="form-control" id="telp" value="<?= $universitas['telp']; ?>">
                             <small class="form-text text-danger"><?= form_error('telp'); ?></small>
                         </div>
 
                         <div class="form-group">
-                            <label for="telp">Picture</label>
+                            <label for="image">Logo</label>
                             <div class="row">
                                 <div class="col-sm-2">
                                     <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail img-preview">
@@ -44,7 +44,7 @@
                                 <div class="col-sm-7">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" id="image" name="image" onchange="previewImg();">
-                                        <label class="custom-file-label" for="image">Choose file</label>
+                                        <label class="custom-file-label" for="image">Pilih file</label>
                                     </div>
                                 </div>
                             </div>
