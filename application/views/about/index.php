@@ -1,6 +1,51 @@
+<body >
 <div class="container">
-    <h1 class="mt-4">About Us</h1>
-    <h4>Kami Hadir memberikan solusi untuk anda mencari kampus terbaik</h4>
+<style>
+.mt-4 {
+  font-family: Roboto;
+  color: #fff;
+  float: left;
+  font-size: 60px;
+  padding-top: 20px;
+}
+.container {
+  color: black;
+}
+body {
+  background-color: #ff9292;
+  height: auto;
+}
+h2 {
+color: #45526c;
+margin-left: 300px;
+}
+.header-content {
+  float: right;
+  margin-left: 300px;
+  color: #45526c;
+}
+.content-des {
+  float: right;
+  margin-left: 300px;
+  font-family: poppins;
+  font-size: small;
+}
+table {
+  padding-top: 20px;
+  margin-top: 50px;
+}
+</style>
+    <h1 class="mt-4"><b>About Us</b></h1>
+    <div class="content-des">
+    <h2><b>KELOMPOK 5</b></h2>
+    <h5 class="header-content">Kami hadir memberikan solusi terbaik untuk Anda yang mencari Kampus terbaik</h5>
+    <p class="content-des"> Melalui Tugas mata kuliah MKPL ini kami Kelompok 5 prodi Ilmu Komputer Unoversitas Pertamina mencoba melakukan 
+    kerjasama dalam membuat suatu project dengan menggunakn fitur git dalam melakukan colaboration, 
+    melalui colaborasi ini kami dapat membagi tugas dan juga bekerjasama secara terstriktur</p>
+    </div>
+<br>
+<br>
+<br>
     <table class="table">
   <thead>
     <tr>
@@ -9,7 +54,7 @@
       <th scope="col">NIM</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="main">
     <tr>
       <th scope="row">1</th>
       <td>Guntur Masputra Jr.</td>
@@ -38,3 +83,4 @@
   </tbody>
 </table>
 </div>
+</body>
