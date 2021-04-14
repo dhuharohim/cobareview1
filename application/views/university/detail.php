@@ -5,7 +5,7 @@
                 <div class="card-header">
                     Detail Universitas
                 </div>
-
+              
                 <div class="card">
                     <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail">
                     <div class="card-body">
