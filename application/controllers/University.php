@@ -31,7 +31,7 @@ class University extends CI_Controller
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('website', 'Website', 'required');
-        $this->form_validation->set_rules('telp', 'Telp', 'required');
+        $this->form_validation->set_rules('telp', 'Telp', 'required|numeric');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
@@ -62,7 +62,7 @@ class University extends CI_Controller
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('website', 'Website', 'required');
-        $this->form_validation->set_rules('telp', 'Telp', 'required');
+        $this->form_validation->set_rules('telp', 'Telp', 'required|numeric');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/header', $data);
