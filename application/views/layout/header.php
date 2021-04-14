@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
-
+<style>
+    head {
+        background-color: deeppink;
+    }
+</style>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,12 +17,16 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/homestyle.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/aboutstyle.css">
-
+  
     <!-- Shortcut Icon -->
     <link rel="shortcut icon" href="<?= base_url(); ?>assets/img/office-building.png">
 
     <title><?= $judul; ?></title>
 </head>
+
+<style>
+    
+</style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
