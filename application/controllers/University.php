@@ -92,6 +92,9 @@ class University extends CI_Controller
                 $this->db->set('logo', $old_logo);
             }
 
+            $jumlahLomba = $this->input->post('input_jumlah', true);
+            $this->db->set('jumlah_lomba', $jumlahLomba);
+
             $this->university->ubahDataUniversitas();
             $this->session->set_flashdata('flash', 'diubah');
             redirect('university');

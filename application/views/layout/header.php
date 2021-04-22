@@ -5,6 +5,7 @@
         background-color: deeppink;
     }
 </style>
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,9 +16,8 @@
     <!-- Offline Version -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.css">
     <!-- My CSS -->
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/homestyle.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/aboutstyle.css">
-  
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/mystyle.css">
+
     <!-- Shortcut Icon -->
     <link rel="shortcut icon" href="<?= base_url(); ?>assets/img/office-building.png">
 
@@ -25,7 +25,7 @@
 </head>
 
 <style>
-    
+
 </style>
 
 <body>

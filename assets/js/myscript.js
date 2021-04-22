@@ -1,4 +1,5 @@
 const flashData = $('.flash-data').data('flashdata');
+
 function previewImg() {
     const sampul = document.querySelector('#image');
     const imgPreview = document.querySelector('.img-preview');
@@ -43,3 +44,18 @@ $('.delete-button').on('click', function(ev) {
         }
       })
 });
+
+function totalCount(count) {
+    const inputBtn = document.getElementById('input_jumlah').value;
+    const newInputBtn = parseInt(inputBtn);
+
+    let total = newInputBtn;
+    if(count == true) {
+        total = newInputBtn + 1;
+    }
+    if(count == false && newInputBtn > 0) {
+        total = newInputBtn - 1;
+    }
+    document.getElementById('input_jumlah').value = total;
+    document.getElementById('jumlah_lomba').innerText = total;
+}
