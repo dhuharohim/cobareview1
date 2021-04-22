@@ -1,0 +1,47 @@
+table {
+    font-family: sans-serif;
+   }
+   
+   h2 {
+    color: #2b6684;
+    margin-left: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   
+   .about_body {
+    background-color: #95bddc;
+    height: auto;
+   }
+   
+   .about_us {
+    font-family: cursive;
+    color: #fff;
+    float: left;
+    font-size: 60px;
+    padding-top: 20px;
+   }
+   
+   .header-content {
+    float: right;
+    margin-left: 300px;
+    color: #007;
+   }
+   
+   .content-des {
+    float: right;
+    margin-left: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    color: #000;
+   }
+   
+   .text-center {
+    color: #fff;
+   }
+   
+   .input-jumlah {
+    background-color: #3CBC8D;
+    color: white;
+    width: 100px;
+    text-align: center;
+   }
