@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail">
+                    <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail" alt="">
                     <div class="card-body">
                         <h5 class="card-title"><?= $universitas['nama']; ?></h5>
                         <h6 class="card-subtitle mb-3 text-muted"><?= $universitas['alamat']; ?></h6>

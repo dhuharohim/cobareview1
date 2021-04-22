@@ -44,7 +44,7 @@
                             <label for="image">Logo</label>
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail img-preview">
+                                    <img src="<?= base_url('assets/img/univ_logo/') . $universitas['logo']; ?>" class="img-thumbnail img-preview" alt="">
                                 </div>
                                 <div class="col-sm-7">
                                     <div class="custom-file">
